@@ -111,7 +111,7 @@ frameworkVersion: '2'
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
-
+#testii
 service: sls-ci-cd
 provider:
   name: aws
