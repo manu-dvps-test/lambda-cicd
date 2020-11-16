@@ -7,9 +7,9 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs10.x
-      #      Events:
-      #  GetResource:
-      #    Type: Api
-      #    Properties:
-      #      Path: /
-      #      Method: get
+      Events:
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
