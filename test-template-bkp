@@ -1,14 +1,12 @@
 AWSTemplateFormatVersion : '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: demo lambda
+Description: Demo-Lambda
 Resources:
-  lambdafunction:
+  demolambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: ttttttt
       Handler: index.handler
       Runtime: nodejs10.x
       AutoPublishAlias: prod
       DeploymentPreference:
           Type: AllAtOnce
-
