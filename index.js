@@ -9,6 +9,6 @@ const createResponse = (statusCode, body) => {
 };
 
 exports.handler = (event, context, callback) => {
-  const response = createResponse(200, "Hello new");
+  const response = createResponse(200, "updated....");
   callback(null, response);
 };
