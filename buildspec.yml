@@ -1,15 +1,19 @@
 version: 0.2
 phases:
- install:
-  runtime-versions:
-   python: 3.8
- build: 
-  commands:
-   - sam build
-   - export BUCKET=test-pipeline-output-bucket-manu
-   - sam package --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Installing Prerequisites
+  pre_build:
+    commands:
+      - echo Starting Prebuild
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
 artifacts:
- type: zip
- files:
-  - template.yml
-  - outputtemplate.yml
+  files:
+     - './*'
